@@ -1,0 +1,9 @@
+@font-face {
+    font-family: futura-pt;
+    src: url("./futura-pt-book.2dadbb3c03c1.woff2");
+}
+
+body {
+    font-family: futura-pt, Avenir, -apple-system,BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial,sans-serif;
+    background-color: rgb(243, 243, 243);
+}
