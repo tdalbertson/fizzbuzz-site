@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="styles.css" />
+        <script src="index.js" defer></script>
         <title>Fizz buzz Site</title>
     </head>
     <body>
@@ -13,27 +14,28 @@
                 <p>
                     <span>F</span>izz buzz is a group word game for children to
                     teach them about division. Players take turns to count
-                    incrementally, replacing any number divisible by three with the
-                    word "fizz", and any number divisible by five with the word
-                    "buzz", and any number divisible by both three and five with the
-                    word "fizzbuzz". -<a
+                    incrementally, replacing any number divisible by three with
+                    the word "fizz", and any number divisible by five with the
+                    word "buzz", and any number divisible by both three and five
+                    with the word "fizzbuzz". -<a
                         href="https://en.wikipedia.org/wiki/Fizz_buzz"
                         >Wikipedia</a
                     >
                 </p>
                 <form action="" onsubmit="return getFizzBuzzResults()">
                     <label for="fizzbuzz-number">Enter a number:</label>
-                    <input type="text" id="fizzbuzz-number" required />
-                    <button type="submit">Let's Fizz buzz!</button>
+                    <input
+                        type="number"
+                        id="fizzbuzz-number"
+                        min="0"
+                        step="1"
+                        required
+                    />
+                    <button id="submit-btn">Let's Fizz buzz!</button>
                 </form>
             </div>
             <div class="right-area">
-                <textarea
-                    name="fizzbuzz-results"
-                    id="fizzbuzz-results"
-                    cols="30"
-                    rows="10"
-                ></textarea>
+                <p name="fizzbuzz-results" id="fizzbuzz-results"></p>
             </div>
         </main>
     </body>
