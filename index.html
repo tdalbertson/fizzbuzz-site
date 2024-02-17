@@ -8,31 +8,33 @@
     </head>
     <body>
         <h1>Fizz Buzz</h1>
-        <div class="left-content">
-            <p>
-                <span>F</span>izz buzz is a group word game for children to
-                teach them about division. Players take turns to count
-                incrementally, replacing any number divisible by three with the
-                word "fizz", and any number divisible by five with the word
-                "buzz", and any number divisible by both three and five with the
-                word "fizzbuzz". -<a
-                    href="https://en.wikipedia.org/wiki/Fizz_buzz"
-                    >Wikipedia</a
-                >
-            </p>
-            <form action="" onsubmit="return getFizzBuzzResults()">
-                <label for="fizzbuzz-number">Enter a number:</label>
-                <input type="text" id="fizzbuzz-number" required />
-                <button type="submit">Let's Fizz buzz!</button>
-            </form>
-        </div>
-        <div class="right-area">
-            <textarea
-                name="fizzbuzz-results"
-                id="fizzbuzz-results"
-                cols="30"
-                rows="10"
-            ></textarea>
-        </div>
+        <main>
+            <div class="left-content">
+                <p>
+                    <span>F</span>izz buzz is a group word game for children to
+                    teach them about division. Players take turns to count
+                    incrementally, replacing any number divisible by three with the
+                    word "fizz", and any number divisible by five with the word
+                    "buzz", and any number divisible by both three and five with the
+                    word "fizzbuzz". -<a
+                        href="https://en.wikipedia.org/wiki/Fizz_buzz"
+                        >Wikipedia</a
+                    >
+                </p>
+                <form action="" onsubmit="return getFizzBuzzResults()">
+                    <label for="fizzbuzz-number">Enter a number:</label>
+                    <input type="text" id="fizzbuzz-number" required />
+                    <button type="submit">Let's Fizz buzz!</button>
+                </form>
+            </div>
+            <div class="right-area">
+                <textarea
+                    name="fizzbuzz-results"
+                    id="fizzbuzz-results"
+                    cols="30"
+                    rows="10"
+                ></textarea>
+            </div>
+        </main>
     </body>
 </html>
