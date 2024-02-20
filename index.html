@@ -23,19 +23,31 @@
                     >
                 </p>
                 <form>
-                    <label for="fizzbuzz-number">Enter a number:</label>
-                    <input
-                        type="number"
-                        id="fizzbuzz-number"
-                        min="0"
-                        step="1"
-                        required
-                    />
-                    <button type="button" id="submit-btn">Let's Fizz buzz!</button>
+                    <label for="fizzbuzz-number">Enter an integer number:</label>
+                    <div class="form-wrapper">
+                        <input
+                            type="number"
+                            id="fizzbuzz-number"
+                            min="0"
+                            step="1"
+                            oninput="validity.valid||(value=value.replace(/\D+/g, ''))"
+                            required
+                        />
+                        <!-- oninput for preventing input of negative values -->
+                        <button type="button" id="submit-btn">
+                            Let's Fizz buzz!
+                        </button>
+                    </div>
                 </form>
             </div>
             <div class="right-area">
-                <p name="fizzbuzz-results" id="fizzbuzz-results"></p>
+                <p
+                    name="fizzbuzz-results"
+                    id="fizzbuzz-results"
+                    class="before-results"
+                >
+                    Results will appear here.
+                </p>
             </div>
         </main>
     </body>
