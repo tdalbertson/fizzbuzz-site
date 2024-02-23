@@ -18,6 +18,22 @@ function getFizzBuzzResults(num) {
             fizzBuzzResults[index] = "N/A";
         }
     }
+    displayResults(fizzBuzzResults);
+}
+
+function updateResultsClass() {
+    resultsBox.classList.add("after-results");
+    resultsBox.classList.remove("before-results");
+}
+
+// Display results to results box
+function displayResults(fizzBuzzResults) {
+    // To clear existing text value
+    updateResultsClass();
+    resultsBox.innerText = "";
+    for (num in fizzBuzzResults) {
+        resultsBox.innerText += `${num}: ${fizzBuzzResults[num]}\n`;
+    }
 }
 
 // Get value for fizzBuzzNum then get FizzBuzz results
@@ -25,6 +41,3 @@ submitBtn.addEventListener("click", () => {
     fizzBuzzNum = parseInt(document.getElementById("fizzbuzz-number").value);
     getFizzBuzzResults(fizzBuzzNum);
 });
-
-
-
