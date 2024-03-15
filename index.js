@@ -1,7 +1,7 @@
 let fizzBuzzNum;
 const submitBtn = document.getElementById("submit-btn");
 const resultsBox = document.getElementById("fizzbuzz-results");
-const fizzBuzzResults = {};
+let fizzBuzzResults = {};
 
 // Get fizzbuzz-results by assigning key-value pairs of the number
 // and it's corresponding Fizzbuzz result
@@ -19,6 +19,7 @@ function getFizzBuzzResults(num) {
         }
     }
     displayResults(fizzBuzzResults);
+    fizzBuzzResults = {};
 }
 
 function updateResultsClass() {
