@@ -8,47 +8,51 @@
         <title>Fizz buzz Site</title>
     </head>
     <body>
-        <h1>Fizz Buzz</h1>
-        <main>
-            <div class="left-content">
-                <p>
-                    <span>F</span>izz buzz is a group word game for children to
-                    teach them about division. Players take turns to count
-                    incrementally, replacing any number divisible by three with
-                    the word "fizz", and any number divisible by five with the
-                    word "buzz", and any number divisible by both three and five
-                    with the word "fizzbuzz". -<a
-                        href="https://en.wikipedia.org/wiki/Fizz_buzz"
-                        >Wikipedia</a
+        <div class="wrapper">
+            <h1>Fizz Buzz</h1>
+            <main>
+                <div class="left-content">
+                    <p>
+                        <span>F</span>izz buzz is a group word game for children
+                        to teach them about division. Players take turns to
+                        count incrementally, replacing any number divisible by
+                        three with the word "fizz", and any number divisible by
+                        five with the word "buzz", and any number divisible by
+                        both three and five with the word "fizzbuzz". <br />-
+                        <a href="https://en.wikipedia.org/wiki/Fizz_buzz"
+                            >Wikipedia</a
+                        >
+                    </p>
+                    <form>
+                        <label for="fizzbuzz-number"
+                            >Enter an integer number:</label
+                        >
+                        <div class="form-wrapper">
+                            <input
+                                type="number"
+                                id="fizzbuzz-number"
+                                min="0"
+                                step="1"
+                                oninput="validity.valid||(value=value.replace(/\D+/g, ''))"
+                                required
+                            />
+                            <!-- oninput for preventing input of negative values -->
+                            <button type="button" id="submit-btn">
+                                Let's Fizz buzz!
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="right-content">
+                    <p
+                        name="fizzbuzz-results"
+                        id="fizzbuzz-results"
+                        class="before-results"
                     >
-                </p>
-                <form>
-                    <label for="fizzbuzz-number">Enter an integer number:</label>
-                    <div class="form-wrapper">
-                        <input
-                            type="number"
-                            id="fizzbuzz-number"
-                            min="0"
-                            step="1"
-                            oninput="validity.valid||(value=value.replace(/\D+/g, ''))"
-                            required
-                        />
-                        <!-- oninput for preventing input of negative values -->
-                        <button type="button" id="submit-btn">
-                            Let's Fizz buzz!
-                        </button>
-                    </div>
-                </form>
-            </div>
-            <div class="right-area">
-                <p
-                    name="fizzbuzz-results"
-                    id="fizzbuzz-results"
-                    class="before-results"
-                >
-                    Results will appear here.
-                </p>
-            </div>
-        </main>
+                        Results will appear here.
+                    </p>
+                </div>
+            </main>
+        </div>
     </body>
 </html>
